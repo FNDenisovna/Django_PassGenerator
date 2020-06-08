@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<br>
+<div class = "container text-center" >
+	<div class="card"  style="width: 300; margin-left: 35%;" class = "container text-center" text-align = "left"> <!-- style="width: 18rem;" -->
+	  	<div class="card-body">
+		    <h5 class="card-title">Password Generator</h5>
+		    <p class="card-text">Select parameters and let's generate.</p>
+		    <div class = "container text-left">
+			<form action="{% url 'password' %}">
+				<select name = "length"> 
+					<option value = "7">7</option>
+					<option value = "8">8</option>
+					<option value = "9">9</option>
+					<option value = "10">10</option>
+					
+					<option value = "12" selected = "selected">12</option>
+					<option value = "15">15</option>
+				</select> Length
+				<br>
+		    <input type = "checkbox" name = "uppercase"> Uppercase
+			<br>
+			<input type = "checkbox" name = "numbers"> Numbers
+			<br>
+			<input type = "checkbox" name = "special"> Special characters
+			</div>
+			<input type = "submit" value = "Generate" class="btn btn-outline-primary">
+			</form>
+			<br>
+			<br>
+		    <a href="{% url 'about' %}" class="card-link">About</a>
+		</div>
+	</div>
+</div>
+
+<!--<form action="{% url 'password' %}">  <h1> Password Generator </h1>
+	<select name = "length">
+		
+		<option value = "7">7</option>
+		<option value = "8">8</option>
+		<option value = "9">9</option>
+		<option value = "10">10</option>
+		
+		<option value = "12" selected = "selected">12</option>
+		<option value = "15">15</option>
+	</select>
+	<br>
+<div class = "container text-center">
+
+	<input type = "checkbox" name = "uppercase"> Uppercase
+	<br>
+	<input type = "checkbox" name = "numbers"> Numbers
+	<br>
+	<input type = "checkbox" name = "special"> Special characters
+	<br>
+	<input type = "submit" value = "Generate" class="btn btn-outline-primary">
+</div>
+
+</form>
+<br>
+<br>
+<a href="{% url 'about' %}">About</a>
+
+</div>-->
+
